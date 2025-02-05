@@ -1,0 +1,21 @@
+{%extends  "shop/basic.html"%}
+{%block body%}
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                        {% comment %} <p class="mt-4"><a href="{% url '/shop/signup' %}" class="link">Don't have an account? Sign Up</a></p> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}
